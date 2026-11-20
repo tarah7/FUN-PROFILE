@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mysite</title>
+  <meta name="description" content="Welcome to Nilajith K V's SpongeBob-themed personal portfolio! +2 Computer Science student, Python dev, and creator of the Krusty Krab student management system.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300..700&family=Quicksand:wght@400..700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="sky-clouds">
+    
+    <div class="sky-flower" style="top: 10%; left: 15%; --size: 80px; --delay: 0s;"></div>
+    <div class="sky-flower" style="top: 25%; left: 75%; --size: 120px; --delay: 2s;"></div>
+    <div class="sky-flower" style="top: 60%; left: 5%; --size: 100px; --delay: 4s;"></div>
+    <div class="sky-flower" style="top: 75%; left: 85%; --size: 90px; --delay: 1s;"></div>
+    <div class="sky-flower" style="top: 45%; left: 45%; --size: 110px; --delay: 3s;"></div>
+  </div>
+
+  <div class="bubble-container" id="bubble-canvas"></div>
+
+
+  <div class="jellyfish-container" id="jellyfish-canvas"></div>
+
+  <!-- Main Navigation -->
+  <nav class="ocean-nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="yellow-text">keerthana</span>
+        <span class="pink-text">'s Portal</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#hobbies">Hobbies & Goals</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+  <header id="home" class="hero-section">
+    <div class="hero-content">
+      <div class="pineapple-container">
+
+        <svg class="pineapple-svg" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+          
+          <g class="pineapple-leaves">
+            <path d="M100,50 Q80,10 60,30 Q80,40 100,50" fill="#2e7d32" />
+            <path d="M100,50 Q60,0 45,25 Q65,35 100,50" fill="#388e3c" />
+            <path d="M100,50 Q100,0 100,20 Q100,35 100,50" fill="#4caf50" />
+            <path d="M100,50 Q140,0 155,25 Q135,35 100,50" fill="#388e3c" />
+            <path d="M100,50 Q120,10 140,30 Q120,40 100,50" fill="#2e7d32" />
+          </g>
+        
+          <g class="pineapple-body">
+            <ellipse cx="100" cy="140" rx="60" ry="75" fill="#ff9800" stroke="#e65100" stroke-width="4"/>
+
+            <path d="M50,100 Q100,120 150,100 M42,120 Q100,140 158,120 M40,145 Q100,165 160,145 M45,170 Q100,190 155,170 M60,195 Q100,210 140,195" fill="none" stroke="#e65100" stroke-width="2.5" />
+            <path d="M50,180 Q100,120 150,180 M42,160 Q100,100 158,160 M40,135 Q100,75 160,135 M45,110 Q100,55 155,110" fill="none" stroke="#e65100" stroke-width="2.5" />
+          </g>
+          <!-- Door -->
+          <path d="M85,215 A15,15 0 0,1 115,215 Z" fill="#78909c" stroke="#37474f" stroke-width="3" />
+          <circle cx="109" cy="205" r="2.5" fill="#ffd54f" />
+          <path d="M92,185 L108,185 L108,215 L92,215 Z" fill="#90a4ae" />
+          <!-- Port-hole Window -->
+          <circle cx="100" cy="115" r="20" fill="#81d4fa" stroke="#546e7a" stroke-width="5" />
+          <!-- Window cross bars -->
+          <line x1="80" y1="115" x2="120" y2="115" stroke="#546e7a" stroke-width="3" />
+          <line x1="100" y1="95" x2="100" y2="135" stroke="#546e7a" stroke-width="3" />
+          <!-- Chimney -->
+          <path d="M140,120 L160,100 L160,85 L150,85 L150,95 L135,110 Z" fill="#757575" stroke="#424242" stroke-width="2.5" />
+        </svg>
+        <div class="bubble-spawner" id="pineapple-chimney-smoke"></div>
+      </div>
+      
+      <div class="hero-text-container">
+        <h1 class="welcome-text">Who lives in a computer science class under the sea?</h1>
+        <h2 class="name-highlight">KEERTHANA E!</h2>
+        <p class="subtitle-text">🍍 BSC.Computer Science Student 🍍</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">Start Exploring!</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Wave transition at bottom of Hero -->
+    <div class="ocean-floor-sand"></div>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <div class="wave-accent"></div>
+    <div class="section-container">
+      <h2 class="section-title text-bubble">About Me</h2>
+      
+      <div class="about-grid">
+        <!-- Spongebob Boating License Style Bio Card -->
+        <div class="boating-license">
+          <div class="license-header">
+            <h3>BIKINI BOTTOM PORTFOLIO LICENSE</h3>
+          </div>
+          <div class="license-body">
+            <div class="license-photo">
+              <!-- Spongebob-themed Computer Student avatar placeholder/styled box -->
+              <div class="avatar-sponge">
+                <div class="sponge-eyes">
+                  <div class="eye"><div class="pupil"></div></div>
+                  <div class="eye"><div class="pupil"></div></div>
+                </div>
+                <div class="sponge-cheeks"></div>
+                <div class="sponge-mouth">
+                  <div class="teeth"></div>
+                </div>
+                <div class="sponge-pants">
+                  <div class="collar"></div>
+                  <div class="tie"></div>
+                </div>
+              </div>
+            </div>
+            <div class="license-info">
+              <p><strong>NAME:</strong> KEERTHANA E</p>
+              <p><strong>CLASS:</strong> BSC.Computer Science</p>
+              <p><strong>OCCUPATION:</strong> Tech Explorer / Coder</p>
+              <p><strong>WEAPON OF CHOICE:</strong> Keyboard & Spatula ⌨️🍔</p>
+              <p class="license-motto">"I'm Ready! To Code!"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-bio text-card">
+          <h3>Ahoy there, visitor! ⚓</h3>
+          <p>
+            I'm a senior student specializing in <strong>Computer Science</strong>. 
+            I love diving deep into coding, exploring new technologies, and figuring out how computer systems work behind the scenes.
+          </p>
+          <p>
+            My goal is to become a highly skilled software developer, crafting applications that bring joy and utility to users (much like a perfectly cooked Krabby Patty brings joy to Bikini Bottom!). 
+          </p>
+          <p>
+            Whether it's writing clean Python scripts, building responsive web pages, or dabbling in basic C++ & Java algorithms, I'm always looking for my next programming adventure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section (Krabby Patty Burger Builder) -->
+  <section id="skills" class="skills-section">
+    <div class="section-container">
+      <h2 class="section-title text-bubble">My Krabby Patty Skills</h2>
+      <p class="section-subtitle">Click and hover the layers of my skill Krabby Patty to see what I'm made of!</p>
+      
+      <div class="burger-builder-container">
+        <!-- Interactive Burger Stack -->
+        <div class="burger-stack" id="burger-stack">
+          
+          <!-- Top Bun -->
+          <div class="burger-layer bun-top" data-skill="html-css">
+            <span class="layer-label">TOP BUN: HTML5 & CSS3</span>
+            <div class="sesame-seeds">
+              <span class="seed"></span><span class="seed"></span><span class="seed"></span>
+              <span class="seed"></span><span class="seed"></span><span class="seed"></span>
+            </div>
+          </div>
+          
+          <!-- Tomato Slice -->
+          <div class="burger-layer tomato" data-skill="java-cpp">
+            <span class="layer-label">TOMATO: Java & C++</span>
+            <div class="tomato-segments">
+              <span class="segment"></span><span class="segment"></span>
+            </div>
+          </div>
+          
+          <!-- Cheese Slice -->
+          <div class="burger-layer cheese" data-skill="python">
+            <span class="layer-label">CHEESE: Python</span>
+            <div class="melt-drops">
+              <span class="melt"></span><span class="melt"></span>
+            </div>
+          </div>
+          
+          <!-- Lettuce Leaf -->
+          <div class="burger-layer lettuce" data-skill="problem-solving">
+            <span class="layer-label">LETTUCE: Problem Solving</span>
+          </div>
+          
+          <!-- Meat Patty -->
+          <div class="burger-layer patty" data-skill="cs-fundamentals">
+            <span class="layer-label">PATTY: Computer Science Basics</span>
+          </div>
+          
+          <!-- Bottom Bun -->
+          <div class="burger-layer bun-bottom" data-skill="tools">
+            <span class="layer-label">BOTTOM BUN: Developer Tools</span>
+          </div>
+          
+        </div>
+        
+        <!-- Skill Information Display Card -->
+        <div class="skill-display-card" id="skill-display-card">
+          <div class="display-default" id="display-default-text">
+            <h4>Krabby Patty Skill Recipe 📖</h4>
+            <p>Hover or click on any ingredient of the burger stack to read the details of my technical recipe!</p>
+            <div class="spongebob-wink-icon">✨🍔✨</div>
+          </div>
+          
+          <!-- Dynamic details filled by JS -->
+          <div class="display-content hidden" id="display-details">
+            <h4 id="skill-title">Skill Category</h4>
+            <div class="skill-meter">
+              <div class="skill-meter-fill" id="skill-progress"></div>
+            </div>
+            <p id="skill-description">Skill description goes here...</p>
+            <ul class="skill-bullets" id="skill-bullets">
+              <!-- Bullet points -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Krusty Krab Menu Board) -->
+  <section id="projects" class="projects-section">
+    <div class="section-container">
+      <h2 class="section-title text-bubble">Galley Projects (Krusty Krab Menu)</h2>
+      
+      <div class="projects-menu-board">
+        <div class="board-rope left"></div>
+        <div class="board-rope right"></div>
+        
+        <div class="menu-board-inner">
+          <div class="menu-header">
+            <h3>Today's Specials</h3>
+            <span class="price-notice">Guaranteed Code Delights!</span>
+          </div>
+          
+          <div class="projects-grid">
+            
+            <!-- Project 1 -->
+            <div class="menu-item-card">
+              <div class="item-title-row">
+                <span class="item-id">#01</span>
+                <h4 class="item-name">Personal Portfolio</h4>
+                <span class="item-price">Free</span>
+              </div>
+              <p class="item-desc">This very website! A bubbly Spongebob interactive portfolio crafted with pure HTML, CSS, and JS with customized retro synthesizers and wiggling elements.</p>
+              <div class="item-tags">
+                <span class="tag tag-html">HTML5</span>
+                <span class="tag tag-css">CSS3</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="menu-item-card">
+              <div class="item-title-row">
+                <span class="item-id">#02</span>
+                <h4 class="item-name">Student Result Manager</h4>
+                <span class="item-price">$9.99</span>
+              </div>
+              <p class="item-desc">A system that tracks, calculates, and displays grade results for students. Designed with school grading guidelines in mind.</p>
+              <div class="item-tags">
+                <span class="tag tag-python">Python</span>
+                <span class="tag tag-db">Basic DB / Files</span>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="menu-item-card">
+              <div class="item-title-row">
+                <span class="item-id">#03</span>
+                <h4 class="item-name">Simple Calculator</h4>
+                <span class="item-price">$1.50</span>
+              </div>
+              <p class="item-desc">A clean, functional calculator that performs basic mathematical operations with a fun Bikini Bottom visual spin.</p>
+              <div class="item-tags">
+                <span class="tag tag-html">HTML</span>
+                <span class="tag tag-css">CSS</span>
+                <span class="tag tag-js">JavaScript</span>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="menu-item-card">
+              <div class="item-title-row">
+                <span class="item-id">#04</span>
+                <h4 class="item-name">The To-Do List</h4>
+                <span class="item-price">Priceless</span>
+              </div>
+              <p class="item-desc">An interactive checklist application that keeps track of your tasks and rewards you with rising bubbles when you complete them!</p>
+              <div class="item-tags">
+                <span class="tag tag-js">JavaScript</span>
+                <span class="tag tag-storage">Local Storage</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobbies & Goals Section (Patrick's Checklist) -->
+  <section id="hobbies" class="hobbies-section">
+    <div class="section-container">
+      <h2 class="section-title text-bubble">Patrick's To-Do List (Hobbies & Goals)</h2>
+      
+      <div class="notebook-checklist">
+        <div class="checklist-header">
+          <div class="starfish-pin"></div>
+          <h3>THINGS TO DO TODAY:</h3>
+        </div>
+        
+        <ul class="checklist-items">
+          <li class="checked">
+            <span class="checkbox-custom checked">✓</span>
+            <span class="item-text">Code everyday (Python, Web Dev, C++)</span>
+          </li>
+          <li class="checked">
+            <span class="checkbox-custom checked">✓</span>
+            <span class="item-text">Explore cool tech (APIs, Frameworks, CSS tricks)</span>
+          </li>
+          <li class="checked">
+            <span class="checkbox-custom checked">✓</span>
+            <span class="item-text">Learn new things under the sea</span>
+          </li>
+          <li class="special-goal">
+            <span class="checkbox-custom goal-box">🎯</span>
+            <span class="item-text"><strong>GOAL:</strong> Become a skilled software developer!</span>
+          </li>
+        </ul>
+        
+        <!-- Interactive Patrick Star image or styled cartoon bubble -->
+        <div class="patrick-star-speech">
+          <div class="speech-bubble">
+            "Knowledge can never replace friendship. I'd rather be an idiot than lose you! But coding is pretty awesome too!"
+          </div>
+          <div class="patrick-head">
+            <div class="patrick-eyes">
+              <div class="p-eye"></div>
+              <div class="p-eye"></div>
+            </div>
+            <div class="patrick-mouth"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+      <div class="message-bottle-container">
+        <h2 class="section-title text-bubble">Send a Message in a Bottle!</h2>
+        
+        <div class="contact-box">
+          <p class="contact-intro">Want to chat about code, Spongebob memes, or computer science? Send me a line!</p>
+          
+          <form class="bottle-form" id="contact-form" onsubmit="event.preventDefault(); alert('Message sealed in a bottle and thrown into the ocean! 🍾🌊');">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required placeholder="SpongeBob SquarePants">
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" required placeholder="sponge@bikinibottom.com">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" required placeholder="I'm ready! I'm ready!"></textarea>
+            </div>
+            <button type="submit" class="btn btn-burger">Send Into Ocean 🌊</button>
+          </form>
+          
+          <div class="contact-divider"><span>OR FIND ME AT</span></div>
+          
+          <div class="social-bubbles">
+            <a href="mailto:kehna56164m@gmail.com" class="social-bubble-link email" title="Email Nilajith">
+              <span class="bubble-pop-effect"></span>
+              📧 Email
+            </a>
+            <a href="https://github.com/tarah7" target="_blank" rel="noopener noreferrer" class="social-bubble-link github" title="GitHub Profile">
+              <span class="bubble-pop-effect"></span>
+              🐙 GitHub
+            </a>
+            <a href="https://linkedin.com/in/keerthana-e-79b23b374" target="_blank" rel="noopener noreferrer" class="social-bubble-link linkedin" title="LinkedIn Profile">
+              <span class="bubble-pop-effect"></span>
+              💼 LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="ocean-footer">
+    <div class="coral-reef-bg"></div>
+    <div class="footer-content">
+      <p class="squidward-dance">🌊 🦀 🐚</p>
+      <p>&copy; 2026 Nilajith K V. Hand-crafted under the sea with spatula-grade 💛 HTML, CSS, and JS.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
